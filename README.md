@@ -1,4 +1,6 @@
-pg_natural_sort_order, PostgreSQL extension.
+![alt text](https://github.com/Bjond/pg_natural_sort_order/blob/master/images/bjondhealthlogo-whitegrey.png "Bjönd Inc.")
+
+# PostgreSQL extension *pg_natural_sort_order*
 =========================================
 
 Provided by Bjönd Inc. free of charge.
