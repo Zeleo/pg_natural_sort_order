@@ -3,7 +3,7 @@
 # PostgreSQL extension *pg_natural_sort_order*
 =========================================
 
-Provided by Bjönd Inc. free of charge.
+Provided by Bjönd Inc. free of charge. MIT License
 
 A simple PostgreSQL extension to allow for natural sort order.
 Basically a function is provided that allows a text string
