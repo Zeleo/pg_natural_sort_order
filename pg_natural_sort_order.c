@@ -72,8 +72,8 @@ natural_sort_order( PG_FUNCTION_ARGS ) {
     
     
     // construct an output buffer of max OUTPUT_BUFFER_LENGTH. Add 10 for safety. :)
-    outputBuffer = (text *)palloc(OUTPUT_BUFFER_LENGTH);
-    SET_VARSIZE(outputBuffer, OUTPUT_BUFFER_LENGTH + VARHDRSZ + 10);
+    outputBuffer = (text *)palloc(OUTPUT_BUFFER_LENGTH + 10);
+    SET_VARSIZE(outputBuffer, OUTPUT_BUFFER_LENGTH + VARHDRSZ);
 
     // Loop through the data character per character.
     // If you find a digit keep grabbing the digits until you have the entire numeric.
