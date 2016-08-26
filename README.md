@@ -25,9 +25,9 @@ Should you wish to build it yourself you will need the PostgreSQL development sy
 That is beyond the scope of this document.
 
 See the following to learn about PostgreSQL extensions:
-http://linuxgazette.net/139/peterson.html
-http://linuxgazette.net/142/peterson.html
-https://www.postgresql.org/docs/9.5/static/xfunc-c.html
+[Peterson, Article 1, Linux Gazette: June 2007 ](http://linuxgazette.net/139/peterson.html)
+[Peterson, Article 2, Linux Gazette: June 2007](http://linuxgazette.net/142/peterson.html)
+[PostgreSQL Documentation Version 9.5](https://www.postgresql.org/docs/9.5/static/xfunc-c.html)
 
 The key issue is that you need pg_config installed.
 
@@ -61,7 +61,7 @@ Algorithm:
 For each numeric normalize it and construct a new string with the normalized
 numeric in place of the original.
 
-Normalization in this instance is that each numeric contain the same number of
+Normalization in this instance is that each numeric contains the same number of
 places: 75 by default but you may choose a value between 1 and 150. 
 Each numeric less than 75 (default) will be prepended with zeros. 
 
