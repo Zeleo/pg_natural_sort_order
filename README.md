@@ -1,7 +1,7 @@
 ![alt text](https://github.com/Bjond/pg_natural_sort_order/blob/master/images/bjondhealthlogo-whitegrey.png "Bjönd Inc.")
 
 # PostgreSQL extension *pg_natural_sort_order*
-=========================================
+=============================================
 
 Provided by Bjönd Inc. free of charge. MIT License
 
@@ -37,7 +37,7 @@ The key issue is that you need pg_config installed.
 
 
 Build
-============
+=====
 
 Assuming the PostgreSQL pgxs system is installed:
 
@@ -108,4 +108,7 @@ SELECT * FROM our_table ORDER BY nso_name;
 
 
 
+---
+[MIT License](https://en.wikipedia.org/wiki/MIT_License) &copy;
 
+[Bjond Inc.](http://www.bjondinc.com/)
