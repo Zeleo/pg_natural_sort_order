@@ -25,9 +25,13 @@ Should you wish to build it yourself you will need the PostgreSQL development sy
 That is beyond the scope of this document.
 
 See the following to learn about PostgreSQL extensions:
+
 [Peterson, Article 1, Linux Gazette: June 2007 ](http://linuxgazette.net/139/peterson.html)
+
 [Peterson, Article 2, Linux Gazette: June 2007](http://linuxgazette.net/142/peterson.html)
+
 [PostgreSQL Documentation Version 9.5](https://www.postgresql.org/docs/9.5/static/xfunc-c.html)
+
 
 The key issue is that you need pg_config installed.
 
