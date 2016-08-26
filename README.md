@@ -112,3 +112,5 @@ SELECT * FROM our_table ORDER BY nso_name;
 [MIT License](https://en.wikipedia.org/wiki/MIT_License) &copy;
 
 [Bjond Inc.](http://www.bjondinc.com/)
+
+![alt text](https://github.com/Bjond/pg_natural_sort_order/blob/master/images/postgres.png "PostgreSQL.")
