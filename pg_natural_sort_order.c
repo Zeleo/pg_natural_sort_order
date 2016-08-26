@@ -70,7 +70,6 @@ natural_sort_order( PG_FUNCTION_ARGS ) {
     numericSize = PG_GETARG_INT32(1);
     numericSize = (numericSize > 0 && numericSize <= NUMERIC_NORMALIZATION_MAX_SIZE) ? numericSize : NUMERIC_NORMALIZATION_DEFAULT_SIZE;
     
-    
     // construct an output buffer of max OUTPUT_BUFFER_LENGTH. Add 10 for safety. :)
     outputBuffer = (text *)palloc(OUTPUT_BUFFER_LENGTH + 10);
     SET_VARSIZE(outputBuffer, OUTPUT_BUFFER_LENGTH + VARHDRSZ);
