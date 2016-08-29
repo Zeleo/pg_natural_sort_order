@@ -1,4 +1,4 @@
-comment = 'pg_natural_sort_order'
+comment = 'pg_natural_sort_order allows for natural sort ordering on a standard index.'
 default_version = '1.0'
 
 relocatable = true
