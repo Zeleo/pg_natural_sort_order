@@ -29,12 +29,14 @@ PG_MODULE_MAGIC;
 #endif
 
 // Constants
-const int NUMERIC_NORMALIZATION_DEFAULT_SIZE = 75;
+const int  NUMERIC_NORMALIZATION_DEFAULT_SIZE = 75;
 const int NUMERIC_NORMALIZATION_MAX_SIZE = 150;
+const int OUTPUT_BUFFER_LENGTH = 10000;
+#define  NUMERIC_BUFFER_LENGTH  200 // more than enough
 
 
 // Signatures
-Datum natural_sort_order( PG_FUNCTION_ARGS );
+PGDLLEXPORT Datum natural_sort_order( PG_FUNCTION_ARGS );
 int normalizeNumeric(char *to, char *from, int toStart, int fromLength, int normalizationSize);
 
 
@@ -63,9 +65,7 @@ int normalizeNumeric(char *to, char *from, int toStart, int fromLength, int norm
 PG_FUNCTION_INFO_V1( natural_sort_order );
 Datum
 natural_sort_order( PG_FUNCTION_ARGS ) {
-    const int OUTPUT_BUFFER_LENGTH = 10000;
-    const int NUMERIC_BUFFER_LENGTH = 200; // more than enough
-    
+   
     // variable declarations
     text *original;
     int originallen;
