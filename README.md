@@ -107,6 +107,14 @@ SELECT * FROM our_table ORDER BY nso_name;
 ```
 
 
+Binaries 
+============
+
+Within the _binaries_ directory are contained the various shared libraries
+for Windows, MacOS and Linux. In addition a Windows 2015 Express project
+has been included for the production of the Windows DLL from scratch 
+should you wish to do so. 
+
 
 ---
 [MIT License](https://en.wikipedia.org/wiki/MIT_License) &copy;
