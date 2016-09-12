@@ -2,7 +2,7 @@
    "name": "pg_natural_sort_order",
    "abstract": "Natural Sort Order for PostgreSQL 9",
    "description": "pg_natural_sort_order allows for natural sort ordering on a standard index via a simple and configurable normalization function.",
-   "version": "0.2.5",
+   "version": "1.1.0",
    "maintainer": [
       "Stephen 'Crash' Agneta <sagneta@gmail.com>"
    ],
@@ -23,7 +23,7 @@
      "pg_natural_sort_order": {
        "file": "pg_natural_sort_order--1.0.sql",
        "docfile": "README.md",
-       "version": "1.0.0",
+       "version": "1.1.0",
        "abstract": "Unit testing assertions for PostgreSQL"
      }
    },
@@ -40,7 +40,7 @@
    },
    "generated_by": "Stephen 'Crash' Agneta",
    "meta-spec": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "url": "http://pgxn.org/meta/spec.txt"
    },
    "tags": [
