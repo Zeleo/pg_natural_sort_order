@@ -21,7 +21,7 @@
    },
    "provides": {
      "pg_natural_sort_order": {
-       "file": "pg_natural_sort_order--1.0.sql",
+       "file": "pg_natural_sort_order--1.0.1.sql",
        "docfile": "README.md",
        "version": "1.0.1",
        "abstract": "Unit testing assertions for PostgreSQL"
