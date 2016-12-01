@@ -115,6 +115,50 @@ for Windows, MacOS and Linux. In addition a Windows 2015 Express project
 has been included for the production of the Windows DLL from scratch 
 should you wish to do so. 
 
+Windows Binaries
+================
+
+Windows, as per always, is a chore. Not only is the creation of the shared libraries
+different but you also need to ensure you install additonal Visual Studio dll's.
+Those additional libraries can be installed via _Visual C++ Redistributable for Visual Studio 2015_.
+
+I'm a Linux dev and not a Windows developer (thank the Gods) so this work was done via the good
+people of the Republic of Germany. There is a subdirectory called _windows_ off of root that contains
+a zip file of several versions of the DLL suitable for use as long as you install the Visual C++
+distributable libraries.
+
+Here is the snippet of the email describing the particulars:
+
+
+```
+Hi Stephen,
+please find attached the ddl's for Postgresql 9.2, 9.3, 9.4, 95. and 9.6.
+
+Here is how I generated them:
+I compiled them using the latest installations available for the releases (9.2.19, 9.3.15, 9.4.10, 9.5.5 and 9.6.1) at https://www.postgresql.org/download/windows/ .
+For the compilation I used Visual Studio Community 2015, Version 14..0.25431.01 Update 3 and the project you provide in your download. The dll's are generated for the configuration release and the x64 platform.
+My platform for this task is Windows 10 64 bit (Version 1607).
+For the postgresql releases I changed the settings for additional include directories (C/C++ in the Configuration Parameters) and the additional library directories (Linker in the Configuration Parameters) to the paths in the particular installation folder for the postgresql-release.
+On fresh systems the necessary "Visual C++ Redistributable für Visual Studio 2015" have to be installed, otherwise you will get an error message when creating the extension for a database. The installation file can be downloaded here:
+https://www.microsoft.com/de-de/download/details.aspx?id=48145
+
+best regards,
+Guido
+…
+-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Guido Heinz M.Eng.
+* Römisch-Germanisches Zentralmuseum
+* Leibniz-Forschungsinstitut für Archäologie
+* Ernst-Ludwig-Platz 2, 55116 Mainz
+* Tel: +49-6131-628-1486
+* mailto:heinz@rgzm.de
+
+Mitglied der Leibniz-Gemeinschaft 
+```
+
+
+
 
 ---
 [MIT License](https://en.wikipedia.org/wiki/MIT_License) &copy;
