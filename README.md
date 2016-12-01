@@ -13,6 +13,9 @@ for proper natural sort order for large rows of data.
 This extension was tested with PostgreSQL 9.5.4 on Linux.
 It really should work on any version of 9.X PostgreSQL
 
+NOTE: For Window's binaries see the chapter *Window's Binaries*
+towards the end of this document.
+
 Installation
 ============
 
@@ -115,7 +118,7 @@ for Windows, MacOS and Linux. In addition a Windows 2015 Express project
 has been included for the production of the Windows DLL from scratch 
 should you wish to do so. 
 
-Windows Binaries
+Window's Binaries
 ================
 
 Windows, as per always, is a chore. Not only is the creation of the shared libraries
@@ -144,7 +147,6 @@ https://www.microsoft.com/de-de/download/details.aspx?id=48145
 
 best regards,
 Guido
-…
 -- 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Guido Heinz M.Eng.
