@@ -148,13 +148,12 @@ https://www.microsoft.com/de-de/download/details.aspx?id=48145
 best regards,
 Guido
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Guido Heinz M.Eng.
-* Römisch-Germanisches Zentralmuseum
-* Leibniz-Forschungsinstitut für Archäologie
-* Ernst-Ludwig-Platz 2, 55116 Mainz
-* Tel: +49-6131-628-1486
-* mailto:heinz@rgzm.de
+ Guido Heinz M.Eng.
+ Römisch-Germanisches Zentralmuseum
+ Leibniz-Forschungsinstitut für Archäologie
+ Ernst-Ludwig-Platz 2, 55116 Mainz
+ Tel: +49-6131-628-1486
+ mailto:heinz@rgzm.de
 
 Mitglied der Leibniz-Gemeinschaft 
 ```
