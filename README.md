@@ -95,7 +95,7 @@ new.nso_name :=  natural_sort_order(new.name, 75);
 return new;
 end $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER natrual_sort_order_trigger BEFORE INSERT OR UPDATE
+CREATE TRIGGER natural_sort_order_trigger BEFORE INSERT OR UPDATE
 ON our_table FOR EACH ROW EXECUTE PROCEDURE natural_sort_order_function();
 
 
