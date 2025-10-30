@@ -22,6 +22,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 #include "postgres.h"
 #include "fmgr.h"
+#include "utils/builtins.h"
+#include "utils/varlena.h"
+#include "access/htup_details.h"
 #include <ctype.h>
 
 #ifdef PG_MODULE_MAGIC
@@ -86,8 +89,8 @@ natural_sort_order( PG_FUNCTION_ARGS ) {
     }
 
     // Get the original string and its length
-    original = PG_GETARG_TEXT_P(0);
-    originallen = VARSIZE(original) - VARHDRSZ;
+    original = PG_GETARG_TEXT_PP(0);
+    originallen = VARSIZE_ANY_EXHDR(original);
 
     numericSize = PG_GETARG_INT32(1);
     numericSize = (numericSize > 0 && numericSize <= NUMERIC_NORMALIZATION_MAX_SIZE) ? numericSize : NUMERIC_NORMALIZATION_DEFAULT_SIZE;
@@ -102,22 +105,22 @@ natural_sort_order( PG_FUNCTION_ARGS ) {
     // the non digit.
     // If you find a non-digit and there is no numeric simply add it and continue to the
     // next character.
-    originalData = VARDATA(original);
+    originalData = VARDATA_ANY(original);
     for(i = 0; i < originallen && j < OUTPUT_BUFFER_LENGTH; i++) { 
         if(isdigit(originalData[i]) && k < numericSize) {
             numericBuffer[k++] = originalData[i];
         } else if(k>0) {
-            j = normalizeNumeric(VARDATA(outputBuffer), numericBuffer, j, k, numericSize);
+            j = normalizeNumeric((char *) VARDATA_ANY(outputBuffer), numericBuffer, j, k, numericSize);
             k = 0;
-            VARDATA(outputBuffer)[j++] = originalData[i];
+            ((char *) VARDATA_ANY(outputBuffer))[j++] = originalData[i];
         } else {
-            VARDATA(outputBuffer)[j++] = originalData[i];
+            ((char *) VARDATA_ANY(outputBuffer))[j++] = originalData[i];
         }
     }
 
     // Edge case in which there is a number at the end of the original string.
     if(k>0) {
-        j = normalizeNumeric(VARDATA(outputBuffer), numericBuffer, j, k, numericSize);
+        j = normalizeNumeric((char *) VARDATA_ANY(outputBuffer), numericBuffer, j, k, numericSize);
     }
 
     // The size of the string we generated. Don't forget the variable header size.
